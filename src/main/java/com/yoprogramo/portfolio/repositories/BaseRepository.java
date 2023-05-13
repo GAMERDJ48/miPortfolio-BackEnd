@@ -10,7 +10,7 @@ import java.util.Optional;
 
 @NoRepositoryBean
 public interface BaseRepository<E extends Base, ID extends Serializable> extends JpaRepository<E, ID> {
-    @Query(value = "SELECT * FROM #{#entityName} e WHERE e.id = (SELECT MAX(id) FROM #{#entityName})", nativeQuery = true)
+    @Query(value = "SELECT * FROM persona e WHERE e.id = (SELECT MAX(id) FROM persona)", nativeQuery = true)
     Optional<E> findLast();
 
     @Query(value = "SELECT COUNT(*) FROM #{#entityName}", nativeQuery = true)
