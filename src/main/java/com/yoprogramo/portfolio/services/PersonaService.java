@@ -20,15 +20,6 @@ public class PersonaService extends BaseService<Persona,Long> {
         super(baseRepository);
     }
 
-
-    @Transactional
-    public Persona save(Persona entity) throws Exception {
-        Persona persona = this.findLast();
-        if(persona==null){
-            return super.save(entity);
-        }
-        return entity;
-    }
     public <E extends Base> List<E> addList(List<E> list, E elemento){
         if(list==null){
             list=new ArrayList<>();
