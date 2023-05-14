@@ -1,5 +1,12 @@
 # miPortfolio-BackEnd
 
+Como iniciar si la base de datos esta vacia? 
+
+Debe ejecutar ir al siguente url: 'apiUrl'/portfolio/cargar
+Esta url cargara todos los datos de prueba, mostrando mi portfolio. Si la url se ejecuta dos veces entonces van a ver duplicados. 
+
+Luego se puede ver la API de forma normal con todos los datos cargados. 
+
 Problemas para deploy
 Aplicacion Web funciona bien de forma local pero al hacer el deploy online por medio de render, firebase y clever-cloud se presentan problemas:
 render no inicia: se muestra el mensaje "Started PortfolioApplication in 192.493 seconds (JVM running for 209.888)" pero se queda en "in progress". 
