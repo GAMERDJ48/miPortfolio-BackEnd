@@ -10,6 +10,7 @@ import javax.transaction.Transactional;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class PersonaService extends BaseService<Persona,Long> {
@@ -26,6 +27,18 @@ public class PersonaService extends BaseService<Persona,Long> {
         }
         list.add(elemento);
         return list;
+    }
+
+    public Persona findLast() throws Exception{
+        try{
+            Optional<Persona> last = repository.findLast();
+            if(last.isPresent()){
+                return last.get();
+            }
+            return null;
+        }catch (Exception e){
+            throw new Exception(e.getMessage());
+        }
     }
 
 

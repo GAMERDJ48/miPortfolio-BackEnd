@@ -39,14 +39,7 @@ public class BaseService<E extends Base, ID extends Serializable>{
         }
     }
 
-    @Transactional
-    public int getCount() throws Exception {
-        try{
-            return baseRepository.getCount();
-        }catch(Exception e){
-            throw new Exception(e.getMessage());
-        }
-    }
+
 
     @Transactional
     public E findById(ID id) throws Exception {
@@ -110,17 +103,6 @@ public class BaseService<E extends Base, ID extends Serializable>{
     }
 
 
-    @Transactional
-    public E findLast() throws Exception{
-        try{
-            Optional<E> last = baseRepository.findLast();
-            if(last.isPresent()){
-                return last.get();
-            }
-            return null;
-        }catch (Exception e){
-            throw new Exception(e.getMessage());
-        }
-    }
+
 }
 
