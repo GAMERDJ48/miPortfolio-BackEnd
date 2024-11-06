@@ -2,7 +2,7 @@
 
 IMPORTANTE: El codigo actualizado esta en la rama MASTER
 
-URL de Render: https://portfolio-jqa0.onrender.com
+Si no carga ningún dato en la pagina carga esta URL en el navegador: https://portfolio-jqa0.onrender.com. Esto es por que Render se apaga si esta mucho tiempo inactivo entonces debemos activar el servidor
 
 Como iniciar si la base de datos esta vacia? 
 
